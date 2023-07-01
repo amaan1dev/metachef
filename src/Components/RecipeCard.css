@@ -1,0 +1,30 @@
+.RecipeCard {
+    display: inline-block;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+  
+  .RecipeCard__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .RecipeCard__details {
+    padding: 20px;
+  }
+  
+  .RecipeCard h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .RecipeCard p {
+    font-size: 16px;
+    color: #888;
+  }
+  
