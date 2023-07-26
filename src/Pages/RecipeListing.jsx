@@ -39,13 +39,22 @@ export const RecipeListing = () => {
   }, [filterValue, filterBy, recipeData]);
 
   const handleFilterChange = (event) => {
-    setFilterValue(event.target.value);
-    setFilterBy(event.target.name);
+    const selectedFilter = event.target.name;
+    if (selectedFilter === filterBy) {
+      setFilterValue("");
+      setFilterBy("");
+    } else {
+      setFilterValue("");
+      setFilterBy(selectedFilter);
+    }
   };
 
   return (
     <div className="RecipeListing">
-      <FilterRecipe handleFilterChange={handleFilterChange} />
+      <FilterRecipe
+        handleFilterChange={handleFilterChange}
+        selectedFilter={filterBy}
+      />
 
       <h1>All Recipes</h1>
       {filteredRecipes.map((recipe, index) => (
